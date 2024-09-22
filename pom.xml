@@ -11,7 +11,7 @@
 	<groupId>com.services</groupId>
 	<artifactId>scores</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>scores</name>
+	<name>Backend_test_votos</name>
 	<description>Virtual Master Chef Ilis</description>
 	<properties>
 		<java.version>11</java.version>
