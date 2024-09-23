@@ -86,22 +86,59 @@ La receta está estructurada de la siguiente manera:
 Java 11+
 Maven 3.x
 
-⚙️ Instalación y Ejecución
+⚙⚛️ Despliegue del Frontend en Railway
 
-1.- Clona el repositorio:
-
+📦 Instalación del Frontend en Local
+Clona el repositorio del frontend:
 ```bash
-git clone https://github.com/usuario/nombre-repositorio.git
+git clone https://github.com/RicardoCruzParra/Frontend_test_votos
+```
+Dirígete al directorio del proyecto:
+```bash
+cd frontend-recetas
+```
+Instala las dependencias:
+```bash
+npm install
+```
+Ejecuta la aplicación en modo de desarrollo:
+```bash
+npm start
+```
+La aplicación estará disponible en http://localhost:3000.
+
+🚀 Despliegue del Frontend en Railway
+
+Para desplegar el frontend en Railway, sigue estos pasos:
+
+Clona o haz fork del repositorio del frontend en tu máquina local.
+
+Crea un proyecto en Railway:
+Ve a la plataforma de Railway y crea un nuevo proyecto.
+Conecta tu repositorio de GitHub con Railway.
+
+Configura las variables de entorno si es necesario:
+Añade la variable de entorno REACT_APP_API_URL con la URL de la API backend desplegada en Railway, por ejemplo: https://app-backend.up.railway.app/api.
+
+Despliegue automático: Railway se encargará del proceso de construcción y despliegue automáticamente una vez conectado el repositorio.
+
+Acceso al frontend: Después de desplegar con éxito, Railway proporcionará una URL pública para acceder al frontend, por ejemplo: https://app-frontend.up.railway.app.
+
+🚀 Despliegue del Backend en Railway
+
+⚙️ Instalación y Ejecución del Backend
+
+Clona el repositorio del backend:
+```bash
+git clone https://github.com/RicardoCruzParra/Backend_test_votos
 ```
 
-2.- Dirígete al directorio del proyecto:
-
+Dirígete al directorio del proyecto:
 ```bash
-cd nombre-repositorio
+cd backend-recetas
 ```
 
-3.- Compila el proyecto y ejecuta la aplicación:
-
+Compila el proyecto y ejecuta la aplicación:
 ```bash
 mvn clean install
 mvn spring-boot:run
@@ -120,6 +157,36 @@ Contraseña: (dejar en blanco)
 La API está documentada con Swagger, lo que permite explorar los endpoints fácilmente. Puedes acceder a la interfaz de Swagger en:
 
 URL: http://localhost:8080/swagger-ui.html
+
+🚀 Despliegue en Railway
+
+Para desplegar la API en Railway, sigue estos pasos:
+
+Clona o haz fork del repositorio en tu máquina local.
+
+Crea un proyecto en Railway:
+Ve a la plataforma de Railway y crea un nuevo proyecto.
+Conecta tu repositorio de GitHub con Railway.
+
+Configura las variables de entorno: Railway configurará automáticamente la base de datos si eliges usar una base de datos proporcionada por Railway. Asegúrate de definir las siguientes variables de entorno en el panel de configuración de Railway:
+
+SPRING_DATASOURCE_URL: URL de la base de datos que Railway proporcionará automáticamente.
+
+En tu archivo application.properties, ajusta la configuración para que funcione con Railway:
+
+```properties
+spring.datasource.url=${SPRING_DATASOURCE_URL}
+spring.datasource.username=${DB_USER}
+spring.datasource.password=${DB_PASS}
+```
+Despliegue automático: Railway se encargará del proceso de construcción y despliegue automáticamente una vez conectado el repositorio.
+
+Acceso a la API: Después de desplegar con éxito, Railway proporcionará una URL pública para acceder al backend, por ejemplo: https://app-backend.up.railway.app.
+
+Acceso al Frontend: El frontend también puede ser desplegado en Railway o cualquier plataforma similar. Una vez desplegado, tendrás una URL pública como, por ejemplo: https://app-frontend.up.railway.app.
+
+Swagger en Railway: Podrás acceder a la documentación de Swagger en Railway:
+https://app-backend.up.railway.app/swagger-ui.html
 
 🧪 Pruebas
 
