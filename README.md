@@ -89,6 +89,7 @@ Maven 3.x
 ⚙⚛️ Despliegue del Frontend en Railway
 
 📦 Instalación del Frontend en Local
+
 Clona el repositorio del frontend:
 ```bash
 git clone https://github.com/RicardoCruzParra/Frontend_test_votos
@@ -179,11 +180,18 @@ spring.datasource.url=${SPRING_DATASOURCE_URL}
 spring.datasource.username=${DB_USER}
 spring.datasource.password=${DB_PASS}
 ```
-Despliegue automático: Railway se encargará del proceso de construcción y despliegue automáticamente una vez conectado el repositorio.
+Despliegue automático: 
+Railway se encargará del proceso de construcción y despliegue automáticamente una vez conectado el repositorio.
 
-Acceso a la API: Después de desplegar con éxito, Railway proporcionará una URL pública para acceder al backend, por ejemplo: https://app-backend.up.railway.app.
+Acceso a la API: 
+Después de desplegar con éxito, Railway proporcionará una URL pública para acceder al backend, por ejemplo: https://app-backend.up.railway.app.
 
-Acceso al Frontend: El frontend también puede ser desplegado en Railway o cualquier plataforma similar. Una vez desplegado, tendrás una URL pública como, por ejemplo: https://app-frontend.up.railway.app.
+Acceso al Frontend: 
+El frontend también puede ser desplegado en Railway o cualquier plataforma similar. Una vez desplegado, tendrás una URL pública como, por ejemplo: https://app-frontend.up.railway.app.
+
+La aplicacion esta disponible en el siguiente link:
+
+https://frontendtestvotos-production.up.railway.app
 
 Swagger en Railway: Podrás acceder a la documentación de Swagger en Railway:
 https://app-backend.up.railway.app/swagger-ui.html
